@@ -1,0 +1,228 @@
+/***********************************************Media Queries********************************************************************************/
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+
+    #Croissant,
+    #Or,
+    #Platine {
+        color: red;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    #common {
+        color: red;
+        font-style: italic;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #img_footer {
+        width: 100%;
+    }
+}
+
+@media (min-width: 600px) {
+
+    #Croissant,
+    #Or,
+    #Platine {
+        color: red;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    #common {
+        color: red;
+        font-style: italic;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #img_footer {
+        width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+
+    #Croissant,
+    #Or,
+    #Platine {
+        color: red;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    #common {
+        color: red;
+        font-style: italic;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #territoire {
+        width: 100%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+
+    label {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .title {
+        font-size: 24;
+        font-weight: 600;
+    }
+
+    .card-body {
+        height: 500px;
+        margin-bottom: 75px;
+    }
+
+
+    #common {
+        color: red;
+        font-style: italic;
+        padding-left: 20px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #butPlat {
+        margin-top: 55px;
+        font-weight: bold;
+
+    }
+
+    #butOR {
+        margin-top: 30px;
+        font-weight: bold;
+
+    }
+
+    #butCro {
+        margin-top: 10px;
+        font-weight: bold;
+
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #Croissant,
+    #Or,
+    #Platine {
+        color: red;
+        text-align: center;
+        font-weight: 900;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+
+    .card-body {
+        height: 300px;
+        margin-bottom: 75px;
+    }
+
+    #butOR {
+        margin-top: 70px;
+        font-weight: bold;
+
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .container {
+        background-color: #e8e8e8;
+
+    }
+
+
+    label {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .title {
+        font-size: 24;
+        font-weight: 600;
+    }
+
+
+
+
+    #common {
+        color: red;
+        font-style: italic;
+        padding-left: 20px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #butPlat {
+        margin-top: 75px;
+        font-weight: bold;
+    }
+
+    #butOR {
+        margin-top: 50px;
+        font-weight: bold;
+
+    }
+
+    #butCro {
+        margin-top: 20px;
+        font-weight: bold;
+
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #Croissant,
+    #Or,
+    #Platine {
+        color: red;
+        text-align: center;
+        font-weight: 900;
+    }
+
+}
+
+
+
+button {
+    background-color: #2C7FC1;
+    color: white;
+}
+
+button:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid #2C7FC1;
+}

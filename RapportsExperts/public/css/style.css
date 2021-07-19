@@ -1,0 +1,41 @@
+.contenu {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 50px;
+}
+
+td {
+    font-size: 16px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    font-size: 20px;
+}
+
+thead {
+    background-color: cornflowerblue;
+    color: azure;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+#service {
+    text-align: center;
+}
+
+#revenu {
+    margin-top: 100px;
+    color: green;
+    border: 0.5px solid;
+}
+.paid{
+    background-color: green;
+    color: white;
+}
+.nopaid{
+    background-color: red;
+    color: white;
+}

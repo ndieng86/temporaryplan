@@ -1,0 +1,204 @@
+.contenu{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.top {
+    background-color: #2C7FC1;
+    position: fixed;
+    width: 100%;
+    top:0px;
+    height: 55px;
+    border-bottom: 5px  solid #FEA212;
+}
+
+.top a {
+    color: azure;
+    font-size: 18px;
+}
+
+input {
+    margin-bottom: 14px;
+}
+
+label {
+    color: #000;
+    font-size: 14px;
+}
+
+textarea {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+form {
+    padding-bottom: 50px;
+}
+
+
+
+thead {
+    background-color: #2C7FC1;
+    color: azure;
+    font-size: 13px;
+
+}
+
+thead tr {
+    padding-bottom: 20px;
+}
+
+tbody tr:hover {
+    background-color: #d2dbe4;
+}
+
+.glyphicon:hover {
+    color: black;
+}
+
+.glyphicon:hover {
+    color: azure;
+}
+
+#chiffre {}
+
+select {
+    margin-bottom: 20px;
+}
+
+.btn-success {
+
+    margin-top: 20px;
+}
+
+#address {
+    margin-bottom: 10px;
+}
+
+.contenu {
+
+    padding-top: 50px;
+}
+
+#title {
+    margin-top: 50px;
+}
+
+/********Recherche Bar *******/
+
+.typeahead,
+.tt-query,
+.tt-hint {
+
+    outline: medium none;
+    padding: 8px 12px;
+}
+
+.typeahead:focus {
+    border: 2px solid #0097CF;
+}
+
+.tt-query {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+.tt-hint {
+    color: #999999;
+}
+
+.tt-dropdown-menu {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 12px;
+    padding: 8px 0;
+    width: 422px;
+}
+
+.tt-suggestion {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 3px 20px;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+    background-color: #0097CF;
+    color: #FFFFFF;
+}
+
+.tt-suggestion p {
+    margin: 0;
+}
+
+ul,
+ul li {
+    list-style-type: none;
+}
+
+td {
+    font-size: 11.5px;
+    border: 1px solid black;
+    text-align: center;
+    text-align: center;
+}
+th{
+    text-align: center;
+}
+
+thead {
+    background-color: #2C7FC1;
+    color: azure;
+    text-align: center;
+    border-top: 5px solid #FEA212;
+
+}
+
+#service {
+    text-align: center;
+}
+
+#revenu h2,
+#NombreExpert h2 {
+    margin-top: 50px;
+    background-color: green;
+    color: azure;
+    text-align: center;
+}
+
+#colorpaidYes {
+    background-color: green;
+}
+
+#colorpaidNo {
+    background: red;
+}
+
+#text_Search{
+    font-size: 12px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#table_vue{
+    margin-bottom:100px;
+}
+.left{
+    background-image: url("../img/xp2.jpg");
+    height: 600px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:0 0 5px 3px rgb(0,0,0,0.05);
+    opacity:0.9;
+    border-radius: 3px;
+    margin-top:100px;
+}
+.right{
+    background-color: #2C7FC1;
+    padding-top: 150px;
+    padding-right: 15%;
+    padding-left: 15%;
+    margin-top: 100px;
+    color: white;
+}
+.right label{
+    color: white;
+}

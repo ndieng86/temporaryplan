@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../public/css/style.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>client-</title>
+</head>
+
+<body>
+  <div class="row top">
+    <%- include('./partials/header') %>
+  </div>
+  <div class="container-fluid contenu">
+
+    <div class="row">
+      <h2 style="margin-top: 50px;">Informations personelles</h2>
+      <div class="col-3">
+        <div class="col-3">
+          <h4>Client UID: <%=unikClient[0].uid%></h4>
+          
+        </div>
+        <div class="col-4">
+          <h3>Nom: <%=unikClient[0].lastname%>
+          </h3>
+        </div>
+        <div class="col-5">
+          
+          <h4>Prenom:
+            <%=unikClient[0].firstname%>
+          </h4>
+        </div>
+      </div>
+      <div class="col-5">
+        <div class="col-1">
+          <h4>Email:
+            <%=unikClient[0].email%>
+          </h4>
+        </div>
+        <div class="col-6">
+          <h4>Besoin de Qualification:
+            <%=unikClient[0].to_qualify%>
+          </h4>
+        </div>
+        <div class="col-4">
+          <h4>Langue Préférée:
+            <%=unikClient[0].lang%>
+          </h4>
+        </div>
+      </div>
+
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-3">
+        <h2>Adresses</h2>
+        <ul>
+          <% for(Address of Unikclient_Addres) { %>
+            <li>
+              <h4>
+                <%= Address.street_no %>
+                  <%= Address.street %>
+                    <%= Address.city %>
+                      <%= Address.province %>
+                        <%= Address.zip %>
+              </h4>
+            </li>
+            <% } %>
+        </ul>
+      </div>
+    </div>
+
+    <hr>
+    <div class="row">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col"><input type="checkbox"></th>
+            <th scope="col">Uid Client</th>
+            <th scope="col">Uid Projet</th>
+            <th scope="col">Action</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Langue préférée</th>
+            <th scope="col">Courriel</th>
+            <th scope="col">Adresse</th>
+            <th scope="col">Contact</th>
+            <th scope="col">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <h2>Projets</h2>
+          <% for(proj of projectByClient) { %>
+            <tr>
+              <td>
+                <input type="checkbox">
+              </td>
+              <td>
+                <%= proj.uid_client %>
+              </td>
+              <td>
+                <%= proj.uidproject %>
+              </td>
+              <td>
+                <a href="/editProject/<%=proj.uidproject%>">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                </a>|
+                <a href="/vue_project/<%=proj.uidproject%>">
+                  <span class="glyphicon glyphicon-eye-open"></span>
+                </a>
+              </td>
+
+              <td>
+                <%= proj.firstname %>
+              </td>
+              <td>
+                <%= proj.lastname %>
+              </td>
+              <td>
+                <%= proj.lang %>
+              </td>
+              <td>
+                <%= proj.email %>
+              </td>
+              <td>
+                <%= proj.street_no %>
+                  <%= proj.street%>
+                    <%= proj.city %>
+                      <%= proj.province %>
+                        <%= proj.zip %>
+              </td>
+              <td>
+                <%= proj.phone1 %>
+              </td>
+              <td>
+                <%= proj.status %>
+              </td>
+            </tr>
+            <% } %>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

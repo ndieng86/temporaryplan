@@ -1,0 +1,141 @@
+$(document).ready(function () {
+    $("#territoire").change(function (event) {
+        event.preventDefault()
+        var territoire = document.getElementById("territoire").value;
+        console.log(territoire)
+        $.ajax({
+            type: 'GET',
+            url: '/handleterritory',
+            data: {
+                territoire: territoire
+            },
+
+            success: function (data) {
+                var nbCroissant = 0;
+                var nbOR = 0;
+                total = 0;
+                var nbPlatine = 0;
+                for (i = 0; i < data.terr_avalaible.length; i++) {
+                    if (data.terr_avalaible[i].uid_subscription_plan == 3) {
+
+                        console.log(data.terr_avalaible[i].forfait);
+                        nbCroissant += 1;
+                    } else if (data.terr_avalaible[i].uid_subscription_plan == 4) {
+                        nbOR += 1;
+                        console.log(data.terr_avalaible[i].forfait);
+                    } else if (data.terr_avalaible[i].uid_subscription_plan == 9) {
+
+                        nbPlatine += 1;
+                    } else {
+                        console.log(data.terr_avalaible[i].forfait);
+                    }
+
+                }
+
+                if (nbCroissant >= 5) {
+
+                    document.getElementById("Croissant").style.display = 'block';
+                    document.getElementById("butCro").style.display = 'none';
+
+                }
+                if (nbCroissant < 5) {
+                    document.getElementById("butCro").style.display = 'block';
+                    document.getElementById("Croissant").style.display = 'none';
+
+
+                }
+                if (nbOR >= 2) {
+                    document.getElementById("Or").style.display = 'block';
+                    document.getElementById("butOR").style.display = 'none';
+                }
+                if (nbOR < 2) {
+                    document.getElementById("butOR").style.display = 'block';
+                    document.getElementById("Or").style.display = 'none';
+                }
+                if (nbPlatine >= 1) {
+                    document.getElementById("Platine").style.display = 'block';
+                    document.getElementById("butPlat").style.display = 'none';
+
+                }
+                if (nbPlatine < 1) {
+                    document.getElementById("Platine").style.display = 'none';
+                    document.getElementById("butPlat").style.display = 'block';
+
+                }
+
+
+
+
+
+
+            },
+            error: function (err) {
+                console.log(error)
+            }
+        })
+
+
+    });
+    $("#cr_confirm").click(function (event) {
+        event.preventDefault();
+        var uidcontractor = $("#uidcontractor").val();
+        console.log(uidcontractor)
+        $.ajax({
+            type: 'post',
+            url: '/handleCroissant/uidcontractor',
+            data: {
+                uidcontractor: uidcontractor
+            },
+            success: function (data) {
+                console.log(data)
+
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        })
+
+    })
+    $("#plat_confirm").click(function (event) {
+        event.preventDefault();
+        var uidcontractor = $("#uidcontractor").val();
+        console.log(uidcontractor)
+        $.ajax({
+            type: 'post',
+            url: '/handlePlatine/uidcontractor',
+            data: {
+                uidcontractor: uidcontractor
+            },
+            success: function (data) {
+                console.log(data)
+
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        })
+
+    })
+    $("#Or_confirm").click(function (event) {
+        event.preventDefault();
+        var uidcontractor = $("#uidcontractor").val();
+        console.log(uidcontractor)
+        $.ajax({
+            type: 'post',
+            url: '/handleOr/uidcontractor',
+            data: {
+                uidcontractor: uidcontractor
+            },
+            success: function (data) {
+                console.log(data)
+
+            },
+            error: function (err) {
+                console.log(err);
+            }
+        })
+
+    })
+
+
+})

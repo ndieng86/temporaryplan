@@ -16,6 +16,7 @@
   <script type="text/javascript" src="../public/js/typeahead.min.js"></script>
   <script type="text/javascript" src="../public/js/editor.js"></script>
   <script src="../public/js/AjaxScript.js"></script>
+  <script src="../public/js/login.js"></script>
   <title>Access - App</title>
 </head>
 
@@ -29,7 +30,7 @@
 
         <div class="mb-3">
           <label for="email" class="form-label">Email </label>
-          <input type="text" class="form-control" id="username" name="username" placeholder="username">
+          <input type="text" class="form-control" id="email" name="email" placeholder="email">
         </div>
         <div class="mb-3">
           <label for="password" class="form-label">Password</label>
@@ -37,7 +38,7 @@
         </div>
         <div class="row mt-4">
           <div class="col-3">
-            <button type="submit" class="btn btn-primary">Connexion</button>
+            <button type="submit" class="btn btn-primary" id="loginBtn">Connexion</button>
           </div>
           <div class="col-5 mt-4">
             <p>mot de passe <a href="#" style="color: white;">oublié</a></p>
@@ -53,5 +54,29 @@
 
 
 </body>
+<script src="">
+  /*
+    $(document).ready(function () {
+      function handleLoginBtn() {
+        $("#loginBtn").on("click", function (event) {
+          event.preventDefault();
+          let username = $("#username").val();
+          let password = $("#password").val();
+  
+          $.ajax({
+            url: '/login',
+            method: "POST",
+            data: { username: username, password: password },
+            success: function (data) {
+              console.log(data)
+            },
+            error: function (err) {
+              alert("Your email or password entered is incorrect. Please try again!");
+            }
+          })
+        });
+      }
+    });*/
+</script>
 
 </html>

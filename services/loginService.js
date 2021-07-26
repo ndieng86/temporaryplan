@@ -43,7 +43,7 @@ let findUserByEmail =(email)=>{
 let findUserById = (id)=>{
     return new Promise((resolve,reject)=>{
         try {
-            conn.query("SELECT * from sn_users where id=?",id, (error, rows)=>{
+            conn.query("SELECT * from sn_users where uid=?",id, (error, rows)=>{
                 if(error) reject(error)
                 let user = rows[0];
                 resolve(user)
@@ -66,9 +66,4 @@ let comparePasswordUser = (user, password)=>{
     })
 }
 
-export{
-    handleLogin,
-    findUserByEmail,
-    findUserById,
-    comparePasswordUser
-};
+export {handleLogin,findUserByEmail, findUserById,comparePasswordUser};

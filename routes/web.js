@@ -4,6 +4,8 @@ dotenv.config({ silent: process.env.NODE_ENV === 'production' });
 import express from 'express';
 import passport from 'passport'
 import passportAuth from '../configs/passportAut.js';
+import {getLoginPage} from '../controllers/loginController.js';
+import {getHomePage} from "../controllers/homePageController.js";
 
 import bodyParser from 'body-parser';
 import  conn from '../configs/connectDB.js'
@@ -12,10 +14,11 @@ import  conn from '../configs/connectDB.js'
 
 
 import flash from  'connect-flash';
+import { handleLogin } from "../services/loginService.js";
 
 
 
-passportAuth()
+
 
 
 var router = express.Router()
@@ -27,30 +30,17 @@ router.use(flash())
 
 
 
-router.get('/clients',(req,res)=>{
-  let sql = "select * from sr_client    order by uid DESC limit 70 ";
-  conn.query(sql,(err, result, field) =>{
-      if (err) throw err;
-      return res.render('homepage', { clients:result, user:req.firstname})
-  });
-}) 
+router.get('/', getHomePage) 
 
-router.get('/',(req,res)=>{
-   res.render('login');
-})
 
-router.post("/login",passport.authenticate("local",{
-successRedirect:"/clients",
-failureRedirect:"/",
-successFlash:true,
-failureFlash:true
-}))
+
+router.post("/login",handleLogin)
 
 router.get('/refresh', (req, res) => {
   let sql = "select * from sr_client    order by uid DESC limit 70 ";
   conn.query(sql,(err, result, field) =>{
       if (err) throw err;
-      res.render('index', { clients:result})
+      res.render('clients', { clients:result})
   });
 
 })

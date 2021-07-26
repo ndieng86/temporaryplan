@@ -38,7 +38,7 @@ app.use(connectFlash())
 ///Post new Client
 
 app.use('/', router);
-app.use('/src/web', router);
+app.use('/routes', router);
 
 
 /**************************Handle login************************* */
@@ -51,7 +51,7 @@ app.use(passport.session())
 
 
 ///local running api port number
-const PORT = 3006;
+const PORT = 30006;
 
 app.listen(PORT, ()=>{
     console.log(`ecoute sur le port ${PORT}`);

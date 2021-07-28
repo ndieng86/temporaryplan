@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include /partials/head %>
+<body>
+<% include /partials/nav %>
+  <div class="jumbotron">
+    <div class="container">
+    <h1>Create Item Form</h1>
+        <p>This sample app is meant as a starting point and example for your NodeJS QuickBooks Online integrations.</p>
+    </div>    
+  </div>
+  <div class="container"> 
+      <form method="GET" action="/createItem">
+            <div class="row">
+                <div class="col-md-12">
+                    Name <input class="col-md-12" name="ItemName" type="text" />
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                        <select class="dropdown" name="IncomeAccountRef">
+                            <option value="" disabled="disabled" selected="selected">IncomeAccountRef</option>
+                            <% accounts.forEach((account) => { %>
+                                <%if (account.AccountType === "Income" && account.AccountSubType === "SalesOfProductIncome") { %>
+                                    <option value="<%= account.Id %>; <%= account.Name %>" ><%= account.Name %></option>
+                                <% } %>
+                            <% }) %>
+                        </select>                    
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                        <select class="dropdown" name="ExpenseAccountRef">
+                            <option value="" disabled="disabled" selected="selected">ExpenseAccountRef</option>
+                            <% accounts.forEach((account) => { %>
+                                <%if (account.AccountType === "Cost of Goods Sold") { %>
+                                    <option value="<%= account.Id %>; <%= account.Name %>" ><%= account.Name %></option>
+                                <% } %>  
+                            <% }) %>
+                        </select>                    
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                        <select class="dropdown" name="AssetAccountRef">
+                            <option value="" disabled="disabled" selected="selected">AssetAccountRef</option>
+                            <% accounts.forEach((account) => { %>
+                                <%if (account.AccountType === "Other Current Asset") { %>
+                                    <option value="<%= account.Id %>; <%= account.Name %>" ><%= account.Name %></option>
+                                <% } %>
+                            <% }) %>
+                        </select>                    
+                </div>  
+            </div>     
+            <br>  
+            <div class="row">       
+                <div class="col-md-8">
+                        <div class="submit-name">
+                            Quantity <input class="col-md-12" type="text" name="ItemQty" /> <br>
+                        </div>                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                        <div class="submit-name">
+                            Purchase Cost <input class="col-md-12" type="text" name="PurchaseCost" /> <br>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                        <div class="submit-name">
+                            Unit Price <input class="col-md-12" type="text" name="UnitPrice" /> <br>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                        <button class="btn btn-lg btn-primary pull-right" type="submit" value="Make an item">Create an Item</button>
+                </div>
+            </div>
+
+      </form>   
+      <br>
+  </div>
+</body>
+</html>

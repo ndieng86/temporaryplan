@@ -1,204 +1,228 @@
-.contenu{
-    padding-left: 5%;
-    padding-right: 5%;
+/***********************************************Media Queries********************************************************************************/
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+
+    #Croissant,
+    #Or,
+    #Platine {
+        color: red;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    #common {
+        color: red;
+        font-style: italic;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #img_footer {
+        width: 100%;
+    }
 }
-.top {
+
+@media (min-width: 600px) {
+
+    #Croissant,
+    #Or,
+    #Platine {
+        color: red;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    #common {
+        color: red;
+        font-style: italic;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #img_footer {
+        width: 100%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+
+    #Croissant,
+    #Or,
+    #Platine {
+        color: red;
+        text-align: center;
+        font-weight: 900;
+    }
+
+    #common {
+        color: red;
+        font-style: italic;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #territoire {
+        width: 100%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+
+
+    label {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .title {
+        font-size: 24;
+        font-weight: 600;
+    }
+
+    .card-body {
+        height: 500px;
+        margin-bottom: 75px;
+    }
+
+
+    #common {
+        color: red;
+        font-style: italic;
+        padding-left: 20px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #butPlat {
+        margin-top: 55px;
+        font-weight: bold;
+
+    }
+
+    #butOR {
+        margin-top: 30px;
+        font-weight: bold;
+
+    }
+
+    #butCro {
+        margin-top: 10px;
+        font-weight: bold;
+
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #Croissant,
+    #Or,
+    #Platine {
+        color: red;
+        text-align: center;
+        font-weight: 900;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+
+    .card-body {
+        height: 300px;
+        margin-bottom: 75px;
+    }
+
+    #butOR {
+        margin-top: 70px;
+        font-weight: bold;
+
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    .container {
+        background-color: #e8e8e8;
+
+    }
+
+
+    label {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .title {
+        font-size: 24;
+        font-weight: 600;
+    }
+
+
+
+
+    #common {
+        color: red;
+        font-style: italic;
+        padding-left: 20px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    #butPlat {
+        margin-top: 75px;
+        font-weight: bold;
+    }
+
+    #butOR {
+        margin-top: 50px;
+        font-weight: bold;
+
+    }
+
+    #butCro {
+        margin-top: 20px;
+        font-weight: bold;
+
+    }
+
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #Croissant,
+    #Or,
+    #Platine {
+        color: red;
+        text-align: center;
+        font-weight: 900;
+    }
+
+}
+
+
+
+button {
     background-color: #2C7FC1;
-    position: fixed;
-    width: 100%;
-    top:0px;
-    height: 55px;
-    border-bottom: 5px  solid #FEA212;
+    color: white;
 }
 
-.top a {
-    color: azure;
-    font-size: 18px;
-}
-
-input {
-    margin-bottom: 14px;
-}
-
-label {
-    color: #000;
-    font-size: 14px;
-}
-
-textarea {
-    margin-bottom: 10px;
-    font-size: 14px;
-}
-
-form {
-    padding-bottom: 50px;
-}
-
-
-
-thead {
-    background-color: #2C7FC1;
-    color: azure;
-    font-size: 13px;
-
-}
-
-thead tr {
-    padding-bottom: 20px;
-}
-
-tbody tr:hover {
-    background-color: #d2dbe4;
-}
-
-.glyphicon:hover {
+button:hover {
     color: black;
-}
-
-.glyphicon:hover {
-    color: azure;
-}
-
-#chiffre {}
-
-select {
-    margin-bottom: 20px;
-}
-
-.btn-success {
-
-    margin-top: 20px;
-}
-
-#address {
-    margin-bottom: 10px;
-}
-
-.contenu {
-
-    padding-top: 50px;
-}
-
-#title {
-    margin-top: 50px;
-}
-
-/********Recherche Bar *******/
-
-.typeahead,
-.tt-query,
-.tt-hint {
-
-    outline: medium none;
-    padding: 8px 12px;
-}
-
-.typeahead:focus {
-    border: 2px solid #0097CF;
-}
-
-.tt-query {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-}
-
-.tt-hint {
-    color: #999999;
-}
-
-.tt-dropdown-menu {
-    background-color: #FFFFFF;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    margin-top: 12px;
-    padding: 8px 0;
-    width: 422px;
-}
-
-.tt-suggestion {
-    font-size: 14px;
-    line-height: 24px;
-    padding: 3px 20px;
-}
-
-.tt-suggestion.tt-is-under-cursor {
-    background-color: #0097CF;
-    color: #FFFFFF;
-}
-
-.tt-suggestion p {
-    margin: 0;
-}
-
-ul,
-ul li {
-    list-style-type: none;
-}
-
-td {
-    font-size: 11.5px;
-    border: 1px solid black;
-    text-align: center;
-    text-align: center;
-}
-th{
-    text-align: center;
-}
-
-thead {
-    background-color: #2C7FC1;
-    color: azure;
-    text-align: center;
-    border-top: 5px solid #FEA212;
-
-}
-
-#service {
-    text-align: center;
-}
-
-#revenu h2,
-#NombreExpert h2 {
-    margin-top: 50px;
-    background-color: green;
-    color: azure;
-    text-align: center;
-}
-
-#colorpaidYes {
-    background-color: green;
-}
-
-#colorpaidNo {
-    background: red;
-}
-
-#text_Search{
-    font-size: 12px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-#table_vue{
-    margin-bottom:100px;
-}
-.left{
-    background-image: url("../img/xp2.jpg");
-    height: 600px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    box-shadow:0 0 5px 3px rgb(0,0,0,0.05);
-    opacity:0.9;
-    border-radius: 3px;
-    margin-top:100px;
-}
-.right{
-    background-color: #2C7FC1;
-    padding-top: 150px;
-    padding-right: 15%;
-    padding-left: 15%;
-    margin-top: 100px;
-    color: white;
-}
-.right label{
-    color: white;
+    background-color: white;
+    border: 1px solid #2C7FC1;
 }

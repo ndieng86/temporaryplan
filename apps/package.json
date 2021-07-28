@@ -1,0 +1,29 @@
+{
+  "name": "intuit-nodejsclient",
+  "version": "1.0.0",
+  "description": "A sample NodeJs application to demonstrate the use of the client OAuth library",
+  "scripts": {
+    "start": "node xpertapp",
+    "test": "./node_modules/mocha/bin/mocha test/**/*-test.js --reporter spec"
+  },
+  "author": "anil_kumar3@intuit.com",
+  "license": "APACHE",
+  "homepage": "https://github.intuit.com/abisalehalliprasan/oauth-jsclient",
+  "dependencies": {
+    "body-parser": "latest",
+    "dotenv": "^5.0.1",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "intuit-oauth": "1.3.0",
+    "mysql": "^2.18.1",
+    "ngrok": "^3.2.5",
+    "node-quickbooks": "^2.0.33",
+    "node-quickbooks-oauth2": "^2.0.13",
+    "node-schedule": "^1.3.2",
+    "nodemon": "^2.0.3",
+    "path": "^0.12.7"
+  }
+}

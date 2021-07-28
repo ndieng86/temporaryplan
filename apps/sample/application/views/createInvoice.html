@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include /partials/head %>
+<body>
+<% include /partials/nav %>
+  <div class="jumbotron">
+    <div class="container">
+    <h1>Success! An Invoice has been created</h1>
+        <p>An invoice has been successfully created for <%= Invoice.CustomerRef.name %><br>
+        Billing Address: 
+        <%if (Invoice.BillAddr) { %>
+        <br><%= Invoice.BillAddr.Line1 %>
+        <br><%= Invoice.BillAddr.City %>, <%= Invoice.BillAddr.CountrySubDivisionCode %>, <%= Invoice.BillAddr.PostalCode %>
+        <% } else { %>
+          No billing address on file
+        <% } %>
+        </p>
+    </div>    
+  </div>
+  <div class='container'>
+    <table class="table">
+      <thead>
+        <tr>
+          <td>Invoice Id</td>
+          <td>Doc Number</td>
+          <td>Transaction Date</td>
+          <td>Total Amount</td>
+          <td>Due Date</td>
+        </tr>
+      </thead>
+      <tr>
+        <td><%= Invoice.Id %></td>
+        <td><%= Invoice.DocNumber %></td>
+        <td><%= Invoice.TxnDate %></td>
+        <td>$<%= Invoice.TotalAmt %></td>
+        <td><%= Invoice.DueDate %></td>
+      </tr>
+    </table>
+    <p>Inventory count of <%= ItemBeforeInvoice.QtyOnHand %> for Item "<%= Item.Name %>" before invoice id <%= Invoice.Id %></p>
+    <p>The quantity on the invoice is <%= Invoice.Line[0].SalesItemLineDetail.Qty %></p>
+    <p>The inventory count post Invoice is <%= Item.QtyOnHand %></p>
+    <div class="row">
+      <form method="GET" action="/createPayment">
+        <input type="hidden" name="InvoiceId" value= "<%= Invoice.Id %>" >
+        <input type="hidden" name="CustomerRef" value= "<%= Invoice.CustomerRef.value %>" >
+        <input type="hidden" name="TotalAmt" value= "<%= Invoice.TotalAmt %>" >
+        <input type="hidden" name="LineAmt" value= "<%= Invoice.Line[0].Amount %>" >
+        <button class="btn btn-lg btn-primary pull-right" type="submit" value="payment">Pay Invoice </button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

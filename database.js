@@ -15,6 +15,7 @@ var conn = mysql.createPool(
   conn.getConnection(function(err, connection) {
     if (err) throw err; // not connected!
     console.log('Connexion a la Base de donnée réussie!')//connected
+    connection.release()
   });
 
 export default conn;

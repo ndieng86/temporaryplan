@@ -50,6 +50,6 @@ https.createServer({
     cert: fs.readFileSync('./SSL/certificate.pem')
 },
 app
-).listen(8001,(req,res) => {
-    console.log('app listen on port 8001')
+).listen(30006,(req,res) => {
+    console.log('app listen on port 30006')
 });

@@ -44,12 +44,6 @@ app.use('/route', router);
 
 
 
-///local running api port number
-https.createServer({
-    key: fs.readFileSync('./SSL/key.pem'),
-    cert: fs.readFileSync('./SSL/certificate.pem')
-},
-app
-).listen(30006,(req,res) => {
+app.listen(30006,(req,res) => {
     console.log('app listen on port 30006')
 });

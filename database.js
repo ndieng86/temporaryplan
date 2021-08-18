@@ -4,7 +4,7 @@ import mysql from 'mysql'
 var conn = mysql.createPool(
     {
       connectionLimit : 100,
-      host: 'jak.sednove.com',
+      host: 'xs.sednove.com',
       user: 'xpert',
       password: 'R@sc@le2020',
       database: 'xpertv1',

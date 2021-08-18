@@ -18,7 +18,7 @@ const app = express();
 
 import router from './routes/route.js'
 import cors from 'cors';
-
+import helmet from 'helmet';
 import fs from 'fs'
 import https from 'https'
 app.use(cors());
@@ -40,7 +40,7 @@ app.engine('ejs', ejs.renderFile);
 app.use('/', router);
 app.use('/route', router);
 
-
+app.use(helmet())
 
 
 

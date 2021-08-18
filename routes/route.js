@@ -18,19 +18,19 @@ router.use(bodyParser.json());
 
                     if(results[0]?.uid_service==1 || results[0]?.uid_service==12)
                     {
-                     res.redirect('/courtier_immoblier')
+                        res.render('courtier_immoblier')
                     }
                     else if(results[0]?.uid_service==2 || results[0]?.uid_service==26)
                     {
-                     res.redirect('/courtier_hypothecaire')
+                     res.redirect('courtier_hypothecaire')
                     }
                     else if(results[0]?.uid_service==4)
                     {
-                     res.redirect('inspecteur_batimat')
+                        res.render('inspecteur_batimat')
                     }
                     else if(results[0]?.uid_service==15 || results[0]?.uid_service==11 || results[0]?.uid_service==9)
                     {
-                     res.redirect('/coutier_assurance')
+                        res.render('coutier_assurance')
                     }  
                     else{
                         res.render('404')
@@ -44,25 +44,8 @@ router.use(bodyParser.json());
             }
           })
     })
-    router.get('/courtier_immoblier')
-    {
-        res.render('courtier_immoblier')
-    }
+   
 
-    router.get('/courtier_hypothecaire')
-    {
-        res.render('courtier_hypothecaire')
-    }
-
-    router.get('/inspecteur_batimat')
-    {
-        res.render('inspecteur_batimat')
-    }
-
-    router.get('/coutier_assurance')
-    {
-        res.render('coutier_assurance')
-    }
     
 
 
